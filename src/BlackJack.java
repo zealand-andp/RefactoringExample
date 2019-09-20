@@ -4,14 +4,14 @@ public class BlackJack {
         int playerHandValue =0;
         for (Card card : playerHand)
         {
-            playerHandValue += value(card.Value, playerHand);
+            playerHandValue += determineCardValue(card.Value, playerHand);
         }
 
         Hand dealerHand = DealerManager.Hand;
         int dealerHandValue =0;
         for (Card card : dealerHand)
         {
-            dealerHandValue += value(card.Value, dealerHand);
+            dealerHandValue += determineCardValue(card.Value, dealerHand);
         }
         if (dealerHandValue>=playerHandValue)
         {
@@ -21,7 +21,7 @@ public class BlackJack {
             return false;
     }
 
-    public int value(int value, Hand hand) {
+    public int determineCardValue(int value, Hand hand) {
         return value;
     }
 }
