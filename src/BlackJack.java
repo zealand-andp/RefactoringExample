@@ -1,17 +1,19 @@
 public class BlackJack {
-    public boolean dealerWins(Hand hand1)
+    public boolean dealerWins(Hand playerHand)
     {
-        Hand h1 = hand1; int sum1 =0;
-        for (Card c : h1)
+        int playerHandValue =0;
+        for (Card card : playerHand)
         {
-            sum1 += value(c.Value, h1);
+            playerHandValue += value(card.Value, playerHand);
         }
-        Hand h2 = DealerManager.Hand; int sum2 =0;
-        for (Card c : h2)
+
+        Hand dealerHand = DealerManager.Hand;
+        int dealerHandValue =0;
+        for (Card card : dealerHand)
         {
-            sum2 += value(c.Value, h2);
+            dealerHandValue += value(card.Value, dealerHand);
         }
-        if (sum2>=sum1)
+        if (dealerHandValue>=playerHandValue)
         {
             return true;
         }

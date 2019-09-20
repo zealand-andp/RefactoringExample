@@ -1,3 +1,4 @@
+// Dummy class only for supporting the BlackJack class
 import java.util.Collection;
 import java.util.Iterator;
 
