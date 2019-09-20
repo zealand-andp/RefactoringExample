@@ -1,13 +1,7 @@
 public class BlackJack {
     public boolean dealerWins(Hand playerHand)
     {
-        int playerHandValue = getHandValue(playerHand);
-
-        Hand dealerHand = DealerManager.Hand;
-        int dealerHandValue = getHandValue(dealerHand);
-
-        return dealerHandValue>=playerHandValue;
-
+        return getHandValue(DealerManager.Hand)>=getHandValue(playerHand);
     }
 
     private int getHandValue(Hand playerHand) {
