@@ -13,12 +13,9 @@ public class BlackJack {
         {
             dealerHandValue += determineCardValue(card.Value, dealerHand);
         }
-        if (dealerHandValue>=playerHandValue)
-        {
-            return true;
-        }
-        else
-            return false;
+
+        return dealerHandValue>=playerHandValue;
+
     }
 
     public int determineCardValue(int value, Hand hand) {
